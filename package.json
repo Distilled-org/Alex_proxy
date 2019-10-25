@@ -1,11 +1,11 @@
 {
   "name": "Alex_proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "The proxy server for Alex's FEC",
   "main": "Proxy.server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/ghrsea05Witty/Alex_proxy#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "nodemon": "^1.19.4"
+    "express": "^4.17.1"
   }
 }
