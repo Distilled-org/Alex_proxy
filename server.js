@@ -5,12 +5,14 @@ const PORT = 4001 || process.env.PORT;
 const bp = require('body-parser');
 const path = require('path');
 const axios = require('axios');
+const compression = require('compression');
 
 app.use(express.static('public'));
 app.use(bp.json());
+app.use(compression());
 
 const selamContainer = 'http://ec2-18-191-231-115.us-east-2.compute.amazonaws.com:7000';
-const alexContainer = 'http://ec2-34-217-10-22.us-west-2.compute.amazonaws.com:4000';
+const alexContainer = 'http://ec2-34-208-164-120.us-west-2.compute.amazonaws.com:4000';
 
 app.get('/app.bundle.js', (req, res) => {
   //get request to hosted EC2 alex app
